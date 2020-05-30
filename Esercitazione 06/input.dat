@@ -1,12 +1,12 @@
-1
+0
 0.01
 1.0
 50
 1.0
-0.02
+0.00
 0
-20
-100000
+100
+20000
 0
 
   ReadInput >> ReadTemp; // 0 = Read given temp, 1 = temp varies from 0.5 to 2.0
