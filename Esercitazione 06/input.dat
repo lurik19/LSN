@@ -1,0 +1,21 @@
+1
+0.01
+1.0
+50
+1.0
+0.02
+0
+20
+100000
+0
+
+  ReadInput >> ReadTemp; // 0 = Read given temp, 1 = temp varies from 0.5 to 2.0
+  ReadInput >> temp_step;
+  ReadInput >> temp;
+  ReadInput >> nspin;
+  ReadInput >> J;
+  ReadInput >> h;
+  ReadInput >> metro; // 1 = Metropolis, !1 = Gibbs
+  ReadInput >> nblk;
+  ReadInput >> nstep;
+  ReadInput >> restart (from previous spin conf, 1 = yes, !1 = no)
