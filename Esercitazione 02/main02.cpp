@@ -1,7 +1,3 @@
-// DOMANDA: SE GENERO UN VETTORE RANDOM DA 0 A 3 E LO DIVIDO IN 6 INTERVALLI MI VIENE LA GIUSTA LEGGE
-//SE INVECE GENERO DUE VETTORI RANDOM: UNO CHE MI FA SCEGLIERE LA DIREZIONE E UNO BERNOULLI CHE MI FA SCEGLIERE SE ANDARE AVANTI O INDIETRO, ALLORA NON MI VIENE LA LEGGE GIUSTA! 
-//VUOL DIRE CHE IL GENEREATORE DI NUMERI CREA CORRELAZIONI TRA QUESTI DUE VETTORI RANDOM?
-
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -26,7 +22,7 @@ int main (int argc, char *argv[]){
 	double p = 0.5; // Probabilità che il camminatore faccia un passo a dx (1-p a sx)
 
 	int dir_index; // Variabile che useremo per scegliere
-		       // in che direzione compiere il passo
+		      	   // in che direzione compiere il passo
 
 	double pos[3] = {0.,0.,0.}; // Posizione del camminatore (inizia nell'origine)
 

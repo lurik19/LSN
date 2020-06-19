@@ -62,8 +62,8 @@ int main (int argc, char *argv[]){
 	// ************************* PARTE 2 *************************
 
 	double r; // Variabile che utilizzeremo per generare
-		  // numeri casuali che seguano la PDF desiderata
-		  // ovvero una PDF ottimale per il calcolo di I
+		  	  // numeri casuali che seguano la PDF desiderata
+		  	  // ovvero una PDF ottimale per il calcolo di I
 
 	// Apertura dei file necessari per scrivere i dati della parte 2
 	ofstream file2("./Data/Es02.1/I_es2.1.b.txt");

@@ -1,0 +1,7 @@
+0
+32
+50
+
+	ReadInput >> soc; // 0 = circumference, !0 = square
+	ReadInput >> ncities;
+	ReadInput >> nmoves;

@@ -1,0 +1,19 @@
+1.2
+108
+0.05
+5.0
+5
+100
+200
+1
+gas
+
+  ReadInput >> temp;
+  ReadInput >> npart;
+  ReadInput >> rho;
+  ReadInput >> rcut;
+  ReadInput >> delta;
+  ReadInput >> nblk;
+  ReadInput >> nstep;
+  ReadInput >> restart; // from previous configuration (1 = yes, !1 = no)
+  ReadInput >> phase;

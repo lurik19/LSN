@@ -14,7 +14,7 @@ int main (int argc, char *argv[]){
 	double L = 0.7*d; // Lunghezza dell'ago
 
 	double side = 1E3*d; // Supponiamo di avere un "pavimento" su cui lanciamo il nostro ago
-		             // e questo pavimento è quadrato e di lato "side"
+		            	 // e questo pavimento è quadrato e di lato "side"
 
 	int M = 1E5; // Numero di tiri
 	int N = 100; // Numero di blocchi
@@ -24,8 +24,8 @@ int main (int argc, char *argv[]){
 
 	double y1; // Coordinata di uno degli estremi dell'ago (che genereremo random)
 	double y2; // Coordinata dell'altro estremo dell'ago (che calcoleremo)
-		   // In teoria dovremmo generare anche le x1 e x2, ma al fine della
-		   // simulazione sono inutili.
+		  	   // In teoria dovremmo generare anche le x1 e x2, ma al fine della
+		   	   // simulazione sono inutili.
 
 	double theta; // Per ottenere y2 (e x2) da y1 (e x1) genereremo un
 		      // angolo theta random in modo uniforme theta tra 0 e 2*PI
@@ -52,7 +52,7 @@ int main (int argc, char *argv[]){
 		N_hit = 0;
 		for(int i=k*num_exp; i<k*num_exp + num_exp; i++){
 			y1 = rnd.Rannyu(0. + L, side - L); // (0 + L) e (side - L): condizioni poste affinchè
-							   // l'ago sia tutto all'interno del pavimento
+							  				   // l'ago sia tutto all'interno del pavimento
 			theta = rnd.Rannyu(0., 2.*M_PI);
 			// Generiamo y1 (e x1) in modo random uniforme
 			y2 = y1 + L*sin(theta);
@@ -62,7 +62,7 @@ int main (int argc, char *argv[]){
 				if ((y1<=j*d && y2>=j*d) || (y1>=j*d && y2<=j*d)){
 					N_hit++;
 					j = int(side/d); // Questo comando interrompe il
-				}			 // ciclo quando troviamo l'ago	
+				}					 // ciclo quando troviamo l'ago	
 			}
 		}
 		// Calcoliamo A_i e (A_i)^2 di UN blocco

@@ -1,0 +1,13 @@
+0
+0.808
+0.619
+0.00
+100
+1000
+
+	ReadInput >> varia_param (0 = no, 1 = sigma, altro = mu)
+	ReadInput >> mu;
+	ReadInput >> sigma;
+	ReadInput >> delta;
+	ReadInput >> nblk;
+	ReadInput >> nstep;

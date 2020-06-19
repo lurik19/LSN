@@ -49,7 +49,7 @@ public:
 	void set_cities(vector<City>);
 	
 	bool check();
-	double L2();
+	double L1();
 	
 	// Pbc
 	int Pbc(int);
@@ -199,15 +199,15 @@ bool Individual :: check(){
 	return check;
 }
 
-double Individual :: L2(){
+double Individual :: L1(){
 
-	double L2 = 0;
+	double L1 = 0;
 	for(int i=0; i<_ncities; i++){
-		L2 += (pow(_cities[_path[i]-1].x - _cities[_path[Pbc(i+1)]-1].x, 2)
+		L1 += sqrt(pow(_cities[_path[i]-1].x - _cities[_path[Pbc(i+1)]-1].x, 2)
 			 + pow(_cities[_path[i]-1].y - _cities[_path[Pbc(i+1)]-1].y, 2));
 	}
 
-	return L2;
+	return L1;
 
 }
 
@@ -340,7 +340,7 @@ void Population :: print_pop(){
 	
 	for(int i=0; i<_npop; i++){
 		_pop[i].print_path(0);
-		cout << ", L2 = " << _pop[i].L2() << endl;
+		cout << ", L1 = " << _pop[i].L1() << endl;
 	}
 	
 }
@@ -369,11 +369,11 @@ void Population :: order_pop(){
 	vector<Votes> votes(_npop);
 	for(int i=0; i<_npop; i++){
 		votes[i].ind = _pop[i];
-		votes[i].vote = _pop[i].L2();
+		votes[i].vote = _pop[i].L1();
 	}
 	
 	// We order the population on a fitness basis:
-	// the higher L2, the lower the rank
+	// the higher L1, the lower the rank
 	sort(votes.begin(), votes.end(),
 		 [](Votes const &a, Votes const &b) { return a.vote > b.vote; });
 

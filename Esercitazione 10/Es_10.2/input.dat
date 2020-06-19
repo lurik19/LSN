@@ -1,0 +1,10 @@
+1
+32
+1000
+200
+10
+	ReadInput >> soc; // 0 = circumference, !0 = square
+	ReadInput >> ncities;
+	ReadInput >> npop;
+	ReadInput >> ngenerations;
+	ReadInput >> nmigr;

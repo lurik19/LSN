@@ -19,9 +19,9 @@ int main (int argc, char *argv[]){
 	// Open files
 	ofstream cities, L2, L2_ave;
 	
-	cities.open("cities_"+filename+".dat");
-	L2.open("cost_"+filename+".dat");
-	L2_ave.open("cost_ave_"+filename+".dat");
+	cities.open("./Data/cities_"+filename+".dat");
+	L2.open("./Data/cost_"+filename+".dat");
+	L2_ave.open("./Data/cost_ave_"+filename+".dat");
 	
 	Population pop(npop, ncities, soc);
 	vector<vector<int>> appop(2);
@@ -33,7 +33,7 @@ int main (int argc, char *argv[]){
 	}
 	cities.close();
 	
-	cities.open("cities_final_"+filename+".dat");
+	cities.open("./Data/cities_final_"+filename+".dat");
 	
 	pop.order_pop();
 	cout << "Migliore valore di L2 iniziale: " << pop.get_votes()[npop - 1] << endl;

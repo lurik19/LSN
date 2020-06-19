@@ -1,5 +1,3 @@
-// DUBBIO : per il chi^2 ottengo una costellazione di punti sparsi tra 80 e 140.. mi sembra molto sparsa come distrubuzione, ma mi sembra di aver fatto giusto.
-
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -122,8 +120,8 @@ int main (int argc, char *argv[]){
 			j = 0;
 			rand = rnd.Rannyu();
 			while(rand < double(j)/M || rand >= double(j+1)/M){ // in questo modo trovo l'indice
-				j++;					    // del sottointervallo in cui è 
-			}						    // caduto il mio numero random
+				j++;					    					// del sottointervallo in cui è 
+			}						    						// caduto il mio numero random
 			count[j] += 1;
 		}
 

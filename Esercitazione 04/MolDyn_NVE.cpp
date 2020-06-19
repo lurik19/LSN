@@ -56,8 +56,8 @@ int main(){
 	     time_steps = i * l + istep;
 	     if(time_steps%iprint == 0) cout << "Number of time-steps: " << time_steps << endl;
 	     if(time_steps%10 == 0){
-		Measure();      //Properties measurement
-                ConfXYZ(nconf); //Write actual configuration in XYZ format //Commented to avoid "filesystem full"! 
+			Measure();      //Properties measurement
+        	//ConfXYZ(nconf); //Write actual configuration in XYZ format //Commented to avoid "filesystem full"! 
 		nconf += 1;
 	     }
 	     // Compute the averages of our observables in the i-th block
@@ -177,7 +177,7 @@ void Input(void){ //Prepare all stuff for the simulation
 	  ReadConf.close();
   }
 
-   if (restart == 0) { // aggiunto io
+   if (restart == 0) {
 	   //Prepare initial velocities
 	   cout << "Prepare random velocities with center of mass velocity equal to zero " << endl << endl;
 	   double sumv[3] = {0.0, 0.0, 0.0};
@@ -211,7 +211,7 @@ void Input(void){ //Prepare all stuff for the simulation
 	     yold[i] = Pbc(y[i] - vy[i] * delta);
 	     zold[i] = Pbc(z[i] - vz[i] * delta);
 	   }
-   } else { // aggiunto io
+   } else {
 	   Move(); // r(t + dt), r(t), v(t)
 	   double sumv2 = 0., T, fs;
 	   double v_x, v_y, v_z;
@@ -360,10 +360,10 @@ void ConfFinal(void){ //Write final configuration
   cout << endl << "Print final configuration to file config.final " << endl << endl;
   cout << "Print final old configuration at to file old.final " << endl << endl;
   WriteConf.open("config.final");
-  WriteOld.open("old.final"); //aggiunto io
+  WriteOld.open("old.final");
   for (int i=0; i<npart; ++i){
     WriteConf << x[i]/box << "   " <<  y[i]/box << "   " << z[i]/box << endl;
-    WriteOld << xold[i]/box << "   " <<  yold[i]/box << "   " << zold[i]/box << endl; // aggiunto io
+    WriteOld << xold[i]/box << "   " <<  yold[i]/box << "   " << zold[i]/box << endl;
   }
   WriteConf.close();
   WriteOld.close();

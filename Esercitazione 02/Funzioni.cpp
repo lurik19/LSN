@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// Funzione con cui calcoliamo l'incertezza statistica di ... (???)
+// Funzione con cui calcoliamo l'incertezza statistica
 
 double error (double* av, double* av2, int n){
 	if (n==0)
